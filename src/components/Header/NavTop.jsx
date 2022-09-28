@@ -5,10 +5,10 @@ import "./style.css";
 function Nav() {
   return (
     <nav className="nav-header">
-      <Link>Accueil</Link>
-      <Link>Profil</Link>
-      <Link>Réglage</Link>
-      <Link>Communauté</Link>
+      <Link to="/">Accueil</Link>
+      <Link to="/Profil">Profil</Link>
+      <Link to="/Réglage">Réglage</Link>
+      <Link to="/Communauté">Communauté</Link>
     </nav>
   );
 }
