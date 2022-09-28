@@ -10,7 +10,7 @@ body {
 .main {
   display: flex;
   width: 100%;
-  height: 1024px;
+  height: 100%;
   justify-content: center;
   background: #e5e5e5;
 }
@@ -20,6 +20,7 @@ body {
   flex-direction: column;
   width: 100%;
   max-width: 1440px;
+  min-height: 1024px;
   background-color: white;
   align-items: flex-start;
 }

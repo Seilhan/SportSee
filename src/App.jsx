@@ -4,6 +4,7 @@ import Accueil from "./Pages/Accueil";
 import Profil from "./Pages/Profil";
 import Réglage from "./Pages/Réglage";
 import Communauté from "./Pages/Communauté";
+import NavItems from "./components/NavItems";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <div className="main">
         <div className="content">
           <Header />
+          <NavItems />
           <Routes>
             <Route path="/" element={<Accueil />} />
             <Route path="/Profil" element={<Profil />} />

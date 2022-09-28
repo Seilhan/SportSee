@@ -1,0 +1,24 @@
+.navitems-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background: #020203;
+  color: white;
+  width: 117px;
+  height: 933px;
+}
+
+.navitems-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.text-info {
+  width: 138px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 24px;
+  transform: rotate(-90deg);
+}
