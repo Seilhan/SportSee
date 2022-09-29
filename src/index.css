@@ -19,8 +19,16 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 1440px;
-  min-height: 1024px;
   background-color: white;
   align-items: flex-start;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+}
+
+.dashboard-container {
+  display: flex;
+  padding: 68px 90px 86px 107px;
 }

@@ -6,7 +6,7 @@
   background: #020203;
   color: white;
   width: 117px;
-  height: 933px;
+  height: calc(100vh - 91px);
 }
 
 .navitems-content {
