@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { getUserInfo } from "../service/api";
 import HeaderInfo from "../components/HeaderInfo";
+import BarChart from "../components/BarChart";
 
 function Dashboard() {
   const [userInfo, setUserInfo] = useState({
@@ -18,6 +19,9 @@ function Dashboard() {
     <div>
       <div className="dashboard-container">
         <HeaderInfo firstName={userInfo.userInfos.firstName} />
+        <div className="barchart">
+          <BarChart />
+        </div>
       </div>
     </div>
   );
