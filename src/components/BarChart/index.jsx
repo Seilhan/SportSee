@@ -63,11 +63,24 @@ const data = [
   },
 ];
 
+const CustomTooltip = ({ active, payload }) => {
+  if (active && payload && payload.length) {
+    return (
+      <div className="custom-tooltip">
+        <p>68 kg</p>
+        <p>550 kCal</p>
+      </div>
+    );
+  }
+
+  return null;
+};
+
 function BarCharts() {
   return (
     <div className="barchart-container">
       <p className="barchart-text">Activité quotidiènne</p>
-      <ResponsiveContainer width="100%" aspect={2}>
+      <ResponsiveContainer width="100%" aspect={2.6}>
         <BarChart
           width={500}
           height={300}
@@ -80,26 +93,25 @@ function BarCharts() {
           }}
           barGap={8}
         >
-          <CartesianGrid strokeDasharray="2 2" vertical={false} />
-          <XAxis dataKey="name" />
+          <CartesianGrid vertical={false} strokeDasharray="3 3" />
+          <XAxis
+            dataKey="name"
+            axisLine={false}
+            tickLine={false}
+            tickMargin={13}
+          />
           <YAxis
             dataKey={""}
             orientation="right"
             interval={"preserveStartEnd"}
+            axisLine={false}
+            tickLine={false}
+            tickMargin={-13}
           />
           <Tooltip
+            content={<CustomTooltip />}
             labelStyle={{
               display: "none",
-            }}
-            wrapperStyle={{
-              color: "#FFF",
-              background: "red",
-              border: "none",
-              outline: "none",
-              width: "50px",
-              height: "70px",
-              textAlign: "center",
-              lineHeight: "1.5",
             }}
             margin={{ top: 0, left: 0, right: 0, bottom: 0 }}
           />
@@ -108,7 +120,6 @@ function BarCharts() {
             verticalAlign="top"
             align="right"
             iconType={"circle"}
-            style={{ margin: "1rem auto", width: "100px" }}
           />
           <Bar
             dataKey="pv"

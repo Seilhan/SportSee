@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { getUserInfo } from "../service/api";
 import HeaderInfo from "../components/HeaderInfo";
 import BarChart from "../components/BarChart";
+import TinyLineChart from "../components/TinyLinechart";
 
 function Dashboard() {
   const [userInfo, setUserInfo] = useState({
@@ -21,6 +22,9 @@ function Dashboard() {
         <HeaderInfo firstName={userInfo.userInfos.firstName} />
         <div className="barchart">
           <BarChart />
+        </div>
+        <div className="linechart">
+          <TinyLineChart />
         </div>
       </div>
     </div>
